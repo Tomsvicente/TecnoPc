@@ -1,0 +1,12 @@
+
+
+form{
+    width: 100%;
+    border: 1px solid blue;
+    padding: 20px;
+}
+/*formulario titulo*/
+h3.text-upparcase.text-left{
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
