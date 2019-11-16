@@ -9,10 +9,13 @@
     <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
-    <section class="container">
+
+
+
+     <section class="container">
       
-     <div class="row">
-         <div class="col-6">
+     <div class="row cliente-contacto">
+         <div class="col-6 ">
         <form action="">
         <h3 class="text-upparcase text-left">Formulario de contacto</h3>
         <div class="form-group row">

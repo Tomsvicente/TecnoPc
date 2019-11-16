@@ -1,12 +1,44 @@
 
-
-form{
-    width: 100%;
-    border: 1px solid blue;
-    padding: 20px;
+.{
+    margin: 0px;
+    padding: 0px;
 }
-/*formulario titulo*/
-h3.text-upparcase.text-left{
-    margin-bottom: 25px;
-    margin-top: 25px;
+body{
+    background: black;
+    margin: 0 auto;
+    padding: 0 auto;
+    width: 100%;
+}
+
+.cliente-contacto{
+
+    margin: 50px;
+    width: 100%;
+}
+.text-upparcase.text-left{
+    color: white;
+}
+.form-group{
+    color: white;
+}
+
+
+/*formulario login*/
+
+.box-login{
+    margin: 50px auto;
+    width: 500px;
+    color: white;
+    border: 1px solid red;
+    padding: 50px;
+}
+.btn-success{
+    margin-top: 10px;
+    background-color: red;
+    border: red;
+}
+.btn-success:hover{
+    color: white;
+    background-color: green;
+    border: red;
 }
