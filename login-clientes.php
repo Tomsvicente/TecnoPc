@@ -17,6 +17,7 @@
         <input type="text" class="form-control" required>
         <label for="">Ingrese su contraseña</label>
         <input type="password" class="form-control" required>
+         <p><a href="">Olvido su contraseña?Click aqui</a></p>
          <input type="submit" value="Entrar" class="btn btn-success">
     </form>
     </div>

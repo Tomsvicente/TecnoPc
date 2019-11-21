@@ -39,6 +39,13 @@ body{
     background-color: red;
     border: red;
 }
+.box-login a{
+    color: red;
+
+}
+.box-login a:hover{
+  color:green;
+}
 .btn-success:hover{
     color: white;
     background-color: green;
