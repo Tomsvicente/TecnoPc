@@ -1,5 +1,5 @@
 
-.{
+*{
     margin: 0px;
     padding: 0px;
 }
@@ -26,11 +26,13 @@ body{
 /*formulario login*/
 
 .box-login{
-    margin: 50px auto;
+   /* margin: 50px auto;*/
     width: 500px;
     color: white;
     border: 1px solid red;
     padding: 50px;
+    margin:auto;
+    margin-top: 50px;
 }
 .btn-success{
     margin-top: 10px;
@@ -41,4 +43,8 @@ body{
     color: white;
     background-color: green;
     border: red;
+}
+.form-control{
+  border: 1px red solid;
+  width: 350px;
 }
