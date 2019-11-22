@@ -73,6 +73,11 @@ li{list-style:none !important; }
 
 ul{    list-style-type: none !important}
 
+h2 {
+    font-size: 30px;
+    font-family: inherit;
+}
+
 #acord {margin-top: 25px;}
 
     #acord  ul {list-style-type: none;
@@ -344,7 +349,7 @@ color: #333;
 /*perfil de usuario
 */
 .perfil{
-   background: #333;
+   background: rgb(56, 55, 55);
     width: 500px;
     color: white;
     border: 1px solid red;
@@ -384,7 +389,7 @@ color: #333;
     margin-right: 10px;
 }
 .perfil-body{
-    background:black;
+    background:#222;
 }
 
 /* Footer */
