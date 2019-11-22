@@ -5,13 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="css/estilo.css">
+	<link rel="stylesheet" href="css/estilo.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
-<body>
-<div class="container">
-    <form action="">
-        
+<body class="perfil-body">
+<div class="form-group perfil" >
+    <div class="row">
+    <form action="" >
+        <h3>Perfil de usuario</h3>
+        <label for="">Nombre de usuario</label>
+        <input type="text" class="bt" value="Juan" disable>
+        <label for="">Apellido</label>
+		<input type="text" class="bt" value="Gonzalez" disabled>
+		<label for="">Email</label>
+		<input type="text" value="la12_dari@htomail.com" class=" bt" disabled>
+		<label for="">Contraseña</label>
+		<input type="password" value="clave" class="bt">
+		<input type="submit" value="Modificar" class=" btn-guardar">
+		<input type="submit" value="Salir" class="  btn-guardar">
     </form>
+    </div>
+ 
 
 </div>
 

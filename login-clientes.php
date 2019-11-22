@@ -14,9 +14,9 @@
     <form action="" >
         <h3>Iniciar sesion</h3>
         <label for="">Nombre de usuario</label>
-        <input type="text" class="form-control" required>
+        <input type="text" class="form-control lavel-login" required>
         <label for="">Ingrese su contraseña</label>
-        <input type="password" class="form-control" required>
+        <input type="password" class="form-control lavel-login" required>
          <p><a href="">Olvido su contraseña?Click aqui</a></p>
          <input type="submit" value="Entrar" class="btn btn-success">
     </form>
