@@ -14,7 +14,7 @@
     <form action="" >
         <h3>Perfil de usuario</h3>
         <label for="">Nombre de usuario</label>
-        <input type="text" class="bt" value="Juan" disable>
+        <input type="text" class="bt" value="Juan" disabled>
         <label for="">Apellido</label>
 		<input type="text" class="bt" value="Gonzalez" disabled>
 		<label for="">Email</label>
