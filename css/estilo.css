@@ -52,7 +52,8 @@
 }
 .chica{ display:none;}
 
-.margin_top90{ margin-top:0px;}
+.margin_top10{ margin-top:10px;}
+.margin_top90{ margin-top:90px;}
 
     #navcatal .cont-nav{width: 100%; float: left; border-bottom:0px;overflow: hidden;}
 
@@ -343,7 +344,7 @@ color: #333;
 /*perfil de usuario
 */
 .perfil{
-   background: black;
+   background: #333;
     width: 500px;
     color: white;
     border: 1px solid red;
