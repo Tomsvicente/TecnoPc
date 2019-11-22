@@ -311,23 +311,80 @@ color: #333;
 }
 
 .box-login{
-    margin: 50px auto;
+   /* margin: 50px auto;*/
     width: 500px;
     color: #666;
     border: 10px solid rgb(146, 30, 30);
     padding: 50px;
+    margin:auto;
+    margin-top: 50px;
 }
 .btn-success{
     margin-top: 10px;
     background-color: red;
     border: rgb(146, 30, 30);
 }
+.box-login a{
+    color: red;
+
+}
+.box-login a:hover{
+  color:green;
+}
 .btn-success:hover{
     color: #333;
     background-color: #E90523;
     border: rgb(146, 30, 30);
 }
-/*fin formulario */
+.lavel-login{
+  border: 1px red solid;
+  width: 350px;
+}
+/*perfil de usuario
+*/
+.perfil{
+   background: black;
+    width: 500px;
+    color: white;
+    border: 1px solid red;
+    padding: 50px;
+    margin:auto;
+    margin-top: 50px;
+}
+.bt{
+    display: block;
+    width: 350px;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    margin-top: 10px;
+}
+.btn-guardar{
+    margin-top: 10px;
+    width: 100px;
+    height: 40px;
+    background: red;
+    border:red;
+    border-radius: .25rem;
+}
+.btn-guardar:hover{
+    background: green;
+    border: green;
+    border-radius: .25rem;
+}
+.label-p{
+    margin-right: 10px;
+}
+.perfil-body{
+    background:black;
+}
 
 /* Media Queries */
 
