@@ -305,21 +305,37 @@ color: #333;
 
 /*formulario login*/
 .cliente-contacto{
-
+    background: rgb(56, 55, 55);
+    width: 500px;
+    color: white;
+    border: 10px solid rgb(146, 30, 30);
+    padding: 50px;
+    margin:auto;
+    margin-top: 50px;
     margin: 50px;
     width: 100%;
 }
 .text-upparcase.text-left{
-    color: #666;
+    color: white;
 }
 .form-group{
-    color: #333;
+    color: white;
 }
 
 .box-login{
    /* margin: 50px auto;*/
     width: 500px;
-    color: #666;
+    color: white;
+    border: 10px solid rgb(146, 30, 30);
+    padding: 50px;
+    margin:auto;
+    margin-top: 50px;
+    background: rgb(56, 55, 55)
+}
+.box-registro{
+    background: rgb(56, 55, 55);
+    width: 500px;
+    color: white;
     border: 10px solid rgb(146, 30, 30);
     padding: 50px;
     margin:auto;
@@ -349,10 +365,10 @@ color: #333;
 /*perfil de usuario
 */
 .perfil{
-   background: rgb(56, 55, 55);
+    background: rgb(56, 55, 55);
     width: 500px;
     color: white;
-    border: 1px solid red;
+    border: 10px solid rgb(146, 30, 30);
     padding: 50px;
     margin:auto;
     margin-top: 50px;
