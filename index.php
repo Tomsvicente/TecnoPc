@@ -20,27 +20,27 @@
                         <div class="navbar-collapse collapse " id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item">
-                            <a class="nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="index.php">Inicio<span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
                             <a class="nav-link" href="#">F.A.Q</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="Contacto.html">Contacto</a>
+                            <a class="nav-link" href="Contacto.php">Contacto</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="./index.html #acord">Catálogo </a>
+                            <a class="nav-link" href="./index.php #acord">Catálogo </a>
                             </li>
                             </ul>
                             <ul class="navbar-nav">
                             <li class="nav-item">
-                            <a class="nav-link" href="login-clientes.html">Ingresar</a>
+                            <a class="nav-link" href="login-clientes.php">Ingresar</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="registro.html">Registrarse</a>
+                            <a class="nav-link" href="registro.php">Registrarse</a>
                             </li>
                             <li class="nav-item">
-                                    <a class="nav-link" href="perfil-usuario.html">Perfil</a>
+                                    <a class="nav-link" href="perfil-usuario.php">Perfil</a>
                                     </li>
                         </ul>
                         </div>
@@ -220,7 +220,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <a href="Producto-detallado.html">
+                            <a href="Producto-detallado.php">
                                 <div class="producto_destacado">
                                     <img src="./images/accesorios-pc.jpg" alt="combo" width="30%">
                                     <div class="cont_texto_des">
@@ -236,7 +236,7 @@
                     <!--Productos-->
                     <div class="row">
                         <div class="col-md-12 catalogo">
-                            <a href="Producto-detallado.html" class="box">
+                            <a href="Producto-detallado.php" class="box">
                                 <div class="box-move">
                                     <div>
                                         <img src="./images/MouseAsus.png" alt="MouseAsus" width="190">
@@ -254,7 +254,7 @@
                                         <div class="caja_estado">Stock</div>
                                 </div>
                             </a>
-                            <a href="Producto-detallado.html" class="box">
+                            <a href="Producto-detallado.php" class="box">
                                     <div class="box-move">
                                         <div>
                                             <img src="./images/MouseAsus.png" alt="MouseAsus" width="190">

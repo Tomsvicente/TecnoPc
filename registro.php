@@ -14,34 +14,34 @@
 <body>
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-dark">
-                <a class="navbar-brand" href="index.html">TecnoPc</a>
+                <a class="navbar-brand" href="index.php">TecnoPc</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse " id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                    <a class="nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.php">Inicio<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                     <a class="nav-link" href="#">F.A.Q</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="Contacto.html">Contacto</a>
+                    <a class="nav-link" href="Contacto.php">Contacto</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="index.html">Catálogo </a>
+                    <a class="nav-link" href="index.php">Catálogo </a>
                     </li>
                     </ul>
                     <ul class="navbar-nav">
                     <li class="nav-item">
-                    <a class="nav-link" href="login-clientes.html">Ingresar</a>
+                    <a class="nav-link" href="login-clientes.php">Ingresar</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="registro.html">Registrarse</a>
+                    <a class="nav-link" href="registro.php">Registrarse</a>
                     </li>
                     <li class="nav-item">
-                            <a class="nav-link" href="perfil-usuario.html">Perfil</a>
+                            <a class="nav-link" href="perfil-usuario.php">Perfil</a>
                             </li>
                 </ul>
                 </div>
@@ -61,6 +61,10 @@
                     <input type="date" class="form-control" required>
                     <label for="">Direccion</label>
                     <input type="text" class="form-control" required>
+                    <br>
+                    <label for="exampleFormControlFile1">Subir una imagen para perfil</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    <br>
                     <label for="">Codigo postal</label>
                     <input type="text" class="form-control" required>
                     <input type="submit" value="Registrarse" class="btn btn-success">
