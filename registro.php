@@ -49,23 +49,23 @@
             <div class="container box-registro">
                 <form action="">
                             <h3>Registro de usuario</h3>
-                    <label for="">E-Mail de usuario</label>
+                    <label for="" class="label-color">E-Mail de usuario</label>
                     <input type="email" class="form-control" required>
-                    <label for="">Ingrese su contraseña</label>
+                    <label for="" class="label-color">Ingrese su contraseña</label>
                     <input type="password" class="form-control" required>
-                    <label for="">Nombre</label>
+                    <label for="" class="label-color">Nombre</label>
                     <input type="text" class="form-control" required>
-                    <label for="">Apellido</label>
+                    <label for="" class="label-color">Apellido</label>
                     <input type="text" class="form-control" required>
-                    <label for="">Fecha de nacimiento</label>
+                    <label for="" class="label-color">Fecha de nacimiento</label>
                     <input type="date" class="form-control" required>
-                    <label for="">Direccion</label>
+                    <label for="" class="label-color">Direccion</label>
                     <input type="text" class="form-control" required>
                     <br>
-                    <label for="exampleFormControlFile1">Subir una imagen para perfil</label>
+                    <label for="exampleFormControlFile1" class="label-color">Subir una imagen para perfil</label>
                     <input type="file" class="form-control-file" id="exampleFormControlFile1">
                     <br>
-                    <label for="">Codigo postal</label>
+                    <label for="" class="label-color">Codigo postal</label>
                     <input type="text" class="form-control" required>
                     <input type="submit" value="Registrarse" class="btn btn-success">
                 </form>

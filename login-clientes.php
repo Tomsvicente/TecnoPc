@@ -51,6 +51,8 @@
         <input type="email" class="form-control" required>
         <label for="">Ingrese su contraseña</label>
         <input type="password" class="form-control" required>
+        <br>
+        <label><input type="checkbox" id="cbox1" value="first_checkbox">Recordar contraseña</label><br>
         <label for=""><a href="">Se olvido su contraseña haga click aqui</a></label>
         <br>
         <input type="submit" value="Entrar" class="btn btn-success">

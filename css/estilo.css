@@ -332,6 +332,10 @@ color: #333;
     margin-top: 50px;
     background: rgb(56, 55, 55)
 }
+/* registro*/
+label {
+    color: white;
+}
 .box-registro{
     background: rgb(56, 55, 55);
     width: 500px;
