@@ -41,6 +41,15 @@
                             <li class="nav-item">
                                     <a class="nav-link" href="perfil-usuario.php">Perfil</a>
                                     </li>
+                                    <li class="nav-item">
+                                        <div class="carrito">
+                                            <div class="carrito_icono"><img src="../TecnoPc/images/carrito.png"></div>
+                                            <div class="carrito_cont_texto">
+                                            <div class="carrito_texto1"><a href="detalle_pedido.php">VER PEDIDO</a></div>
+                                            <div class="carrito_texto2">$ 0</div>
+                                        </div>
+                                        </div>
+                                        </li>
                         </ul>
                         </div>
                     </nav>

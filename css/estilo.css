@@ -78,6 +78,15 @@ h2 {
     font-family: inherit;
 }
 
+.carrito{ float:right; padding:5px; color:#FFF; width:135px; background:#333;
+    font-size:12px !important; margin-left: 5px ; border:1px solid #FFFFFF; border-radius:5px}
+    .carrito a{ color:#FFF;}
+    .carrito_icono{ width:25px; float:left;}
+    .carrito_icono img{ width:100%; border:0;}
+    .carrito_cont_texto{width:80px; margin-left:10px; float:left;}
+    .carrito_texto1{ width:100%;  float:left; text-align:left;}
+    .carrito_texto2{width:100%; float:left;text-align:center;}
+
 #acord {margin-top: 25px;}
 
     #acord  ul {list-style-type: none;
@@ -407,6 +416,7 @@ color: #333;
 .perfil-body{
     background:#222;
 }
+
 
 /* Footer */
 
