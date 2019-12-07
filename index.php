@@ -23,13 +23,17 @@
                             <a class="nav-link" href="index.php">Inicio<span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="#">F.A.Q</a>
+                            <a class="nav-link" href="faq.html">F.A.Q</a>
                             </li>
                             <li class="nav-item">
                             <a class="nav-link" href="Contacto.php">Contacto</a>
                             </li>
                             <li class="nav-item">
+<<<<<<< HEAD:index.php
                             <a class="nav-link" href="./index.php #acord">Catálogo </a>
+=======
+                            <a class="nav-link" href="index.html">Catálogo </a>
+>>>>>>> 532b2696bd3a3655c28040ea8f5ceadd7aa623af:index.html
                             </li>
                             </ul>
                             <ul class="navbar-nav">

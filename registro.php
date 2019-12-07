@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./css/estilo.css">
     <title>TecnoPc</title>
 </head>
-<body>
+<body class="perfil-body">
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-dark">
                 <a class="navbar-brand" href="index.php">TecnoPc</a>
@@ -24,7 +24,7 @@
                     <a class="nav-link" href="index.php">Inicio<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="#">F.A.Q</a>
+                    <a class="nav-link" href="faq.html">F.A.Q</a>
                     </li>
                     <li class="nav-item">
                     <a class="nav-link" href="Contacto.php">Contacto</a>
