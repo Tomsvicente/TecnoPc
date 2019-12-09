@@ -2,20 +2,8 @@
 $email ="";
 $password ="";
 if ($_POST) {
-    
     $email = $_POST["email"];
     $password = $_POST["password"];
-   if (strlen($_POST["password"]) == 0) {
-       # code...
-       echo "Te falto escribir tu clave de ingreso <br>";
-   }
-   if (strlen($_POST["email"]) == 0 ) {
-       # code...
-       echo "El campo email esta vacio <br>";
-   }
-   if (filter_var($_POST["email"],FILTER_VALIDATE_EMAIL)==false) {
-      echo "EL email no tiene el formato correcto";
-   }
 }
 
 ?>
@@ -77,6 +65,19 @@ if ($_POST) {
         <input type="password" name="password" value="<?=$password?>" class="form-control">
         <br>
         <label><input type="checkbox" id="cbox1" value="first_checkbox">Recordar contraseña</label><br>
+        <label for=""><?php if ($_POST) {
+            if (strlen($_POST["password"]) == 0) {
+                # code...
+                echo "Te falto escribir tu clave de ingreso <br>";
+            }
+            if (strlen($_POST["email"]) == 0 ) {
+                # code...
+                echo "El campo email esta vacio <br>";
+            }
+            if (filter_var($_POST["email"],FILTER_VALIDATE_EMAIL)==false) {
+                echo "EL email no tiene el formato correcto";
+            }
+}?></label>
         <label for=""><a href="">Se olvido su contraseña haga click aqui</a></label>
         <br>
         <input type="submit"  value="Entrar" class="btn btn-success">
