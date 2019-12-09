@@ -1,3 +1,27 @@
+<?php
+$email ="";
+$password ="";
+if ($_POST) {
+    
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+   if (strlen($_POST["password"]) == 0) {
+       # code...
+       echo "Te falto escribir tu clave de ingreso <br>";
+   }
+   if (strlen($_POST["email"]) == 0 ) {
+       # code...
+       echo "El campo email esta vacio <br>";
+   }
+   if (filter_var($_POST["email"],FILTER_VALIDATE_EMAIL)==false) {
+      echo "EL email no tiene el formato correcto";
+   }
+}
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -45,17 +69,17 @@
                     </nav>
         </div>
 <div class="container box-login">
-    <form action="">
+    <form action="login-clientes.php" method="POST">
                 <h3>Iniciar sesion</h3>
         <label for="">E-Mail de usuario</label>
-        <input type="email" class="form-control" required>
+        <input type="text" name="email" value="<?= $email?>" class="form-control">
         <label for="">Ingrese su contraseña</label>
-        <input type="password" class="form-control" required>
+        <input type="password" name="password" value="<?=$password?>" class="form-control">
         <br>
         <label><input type="checkbox" id="cbox1" value="first_checkbox">Recordar contraseña</label><br>
         <label for=""><a href="">Se olvido su contraseña haga click aqui</a></label>
         <br>
-        <input type="submit" value="Entrar" class="btn btn-success">
+        <input type="submit"  value="Entrar" class="btn btn-success">
         <a href="perfil-usuario.php"></a>
     </form>
 </div>
