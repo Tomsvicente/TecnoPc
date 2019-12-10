@@ -1,6 +1,7 @@
 <?php
 date_default_timezone_set("America/Argentina/Buenos_Aires");
 
+
 $email ="";
 $password ="";
 $nombre ="";
@@ -18,7 +19,6 @@ if ($_POST) {
     $fecha = $_POST["fecha"];
     $cod = $_POST["cod"];
     $direccion = $_POST["direccion"];
-    
 }
 
 if($_POST){
@@ -28,7 +28,6 @@ if($_POST){
         "nombre"=> $_POST["nombre"],
         "apellido" => $_POST["apellido"],
         "direccion" => $_POST["direccion"],
-       
     ];
 
     $userjson = file_get_contents("archivo/usuarios.txt");

@@ -29,7 +29,7 @@
                             <a class="nav-link" href="Contacto.php">Contacto</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="./index.php">Catálogo </a>
+                            <a class="nav-link" href="index.php">Catálogo </a>
                             </li>
                             </ul>
                             <ul class="navbar-nav">

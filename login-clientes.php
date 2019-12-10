@@ -1,10 +1,16 @@
 <?php
+
 $email ="";
 $password ="";
+$recuerdame ="";
 if ($_POST) {
     $email = $_POST["email"];
     $password = $_POST["password"];
-}
+    $recuerdame = $_POST["recuerdame"];
+    }
+
+
+
 ?>
 
 
@@ -19,7 +25,7 @@ if ($_POST) {
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilo.css">
 </head>
-<body>
+<body class="perfil-body">
         <div class="container-fluid">
                 <nav class="navbar navbar-expand-lg navbar-dark">
                         <a class="navbar-brand" href="index.php">TecnoPc</a>
@@ -32,13 +38,13 @@ if ($_POST) {
                             <a class="nav-link" href="index.php">Inicio<span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="#">F.A.Q</a>
+                            <a class="nav-link" href="faq.php">F.A.Q</a>
                             </li>
                             <li class="nav-item">
                             <a class="nav-link" href="Contacto.php">Contacto</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="#">Catálogo </a>
+                            <a class="nav-link" href="index.php">Catálogo </a>
                             </li>
                             </ul>
                             <ul class="navbar-nav">
@@ -51,6 +57,15 @@ if ($_POST) {
                             <li class="nav-item">
                                     <a class="nav-link" href="perfil-usuario.php">Perfil</a>
                                     </li>
+                                    <li class="nav-item">
+                                        <div class="carrito">
+                                            <div class="carrito_icono"><img src="../TecnoPc/images/carrito.png"></div>
+                                            <div class="carrito_cont_texto">
+                                            <div class="carrito_texto1"><a href="detalle_pedido.php">VER PEDIDO</a></div>
+                                            <div class="carrito_texto2">$ 0</div>
+                                        </div>
+                                        </div>
+                                        </li>
                         </ul>
                         </div>
                     </nav>
@@ -63,7 +78,7 @@ if ($_POST) {
         <label for="">Ingrese su contraseña</label>
         <input type="password" name="password" value="<?=$password?>" class="form-control">
         <br>
-        <label><input type="checkbox" id="cbox1" value="first_checkbox">Recordar contraseña</label><br>
+        <label><input type="checkbox" id="cbox1" name="recuerdame" value="<?=$recuerdame?>">Recordar contraseña</label><br>
         <label for=""><?php if ($_POST) {
             if (strlen($_POST["password"]) == 0) {
                 # code...
