@@ -89,9 +89,9 @@ if ($_POST) {
                     <label for="" class="label-color">Ingrese su contraseña</label>
                     <input type="password" name="password" value="<?= $password?>" class="form-control">
                     <label for="" class="label-color">Nombre</label>
-                    <input type="text" name="apellido" value="<?= $apellido?>" class="form-control">
-                    <label for="" class="label-color">Apellido</label>
                     <input type="text" name="nombre" value="<?= $nombre?>" class="form-control">
+                    <label for="" class="label-color">Apellido</label>
+                    <input type="text" name="apellido" value="<?= $apellido?>" class="form-control">
                     <label for="" class="label-color">Fecha de nacimiento</label>
                     <input type="date" name="fecha" value="<?= $fecha?>" class="form-control">
                     <label for="" class="label-color">Direccion</label>
