@@ -18,7 +18,26 @@ if ($_POST) {
     $fecha = $_POST["fecha"];
     $cod = $_POST["cod"];
     $direccion = $_POST["direccion"];
-    $imagen =$_POST["imagen"];
+    
+}
+
+if($_POST){
+    $usuario = [
+        "email" => $_POST["email"],
+        "password" => password_hash($_POST["password"] ,PASSWORD_DEFAULT),
+        "nombre"=> $_POST["nombre"],
+        "apellido" => $_POST["apellido"],
+        "direccion" => $_POST["direccion"],
+       
+    ];
+
+    $userjson = file_get_contents("archivo/usuarios.txt");
+    $usuarios = json_decode($userjson,true);
+    $usuarios["usuarios"][]= $usuario;
+    file_put_contents("archivo/usuarios.txt", json_encode($usuarios));
+
+   // file_put_contents("archivos/usuarios.txt",json_encode($usuario["nombre"]),FILE_APPEND);
+
 }
 ?>
 
