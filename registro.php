@@ -1,3 +1,29 @@
+<?php
+date_default_timezone_set("America/Argentina/Buenos_Aires");
+
+$email ="";
+$password ="";
+$nombre ="";
+$fecha = "";
+$apellido ="";
+$cod = "";
+$direccion = "";
+$imagen ="";
+
+if ($_POST) {
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+    $nombre = $_POST["nombre"];
+    $apellido = $_POST["apellido"];
+    $fecha = $_POST["fecha"];
+    $cod = $_POST["cod"];
+    $direccion = $_POST["direccion"];
+    $imagen =$_POST["imagen"];
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,27 +82,66 @@
                 </div>
             </nav>
             <div class="container box-registro">
-                <form action="">
+                <form action="registro.php" method = "POST" enctype="multipart/form-data" >
                             <h3>Registro de usuario</h3>
                     <label for="" class="label-color">E-Mail de usuario</label>
-                    <input type="email" class="form-control" required>
+                    <input type="email" name="email" value="<?= $email?>" class="form-control">
                     <label for="" class="label-color">Ingrese su contraseña</label>
-                    <input type="password" class="form-control" required>
+                    <input type="password" name="password" value="<?= $password?>" class="form-control">
                     <label for="" class="label-color">Nombre</label>
-                    <input type="text" class="form-control" required>
+                    <input type="text" name="apellido" value="<?= $apellido?>" class="form-control">
                     <label for="" class="label-color">Apellido</label>
-                    <input type="text" class="form-control" required>
+                    <input type="text" name="nombre" value="<?= $nombre?>" class="form-control">
                     <label for="" class="label-color">Fecha de nacimiento</label>
-                    <input type="date" class="form-control" required>
+                    <input type="date" name="fecha" value="<?= $fecha?>" class="form-control">
                     <label for="" class="label-color">Direccion</label>
-                    <input type="text" class="form-control" required>
+                    <input type="text" name="direccion" value="<?= $direccion?>" class="form-control">
                     <br>
                     <label for="exampleFormControlFile1" class="label-color">Subir una imagen para perfil</label>
-                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    <input type="file" name="imagen" class="form-control-file" id="exampleFormControlFile1">
                     <br>
                     <label for="" class="label-color">Codigo postal</label>
-                    <input type="text" class="form-control" required>
+                    <input type="text" name="cod" value="<?= $cod?>" class="form-control">
                     <input type="submit" value="Registrarse" class="btn btn-success">
+                    <label id="errores" for=""><?php if ($_POST) {
+            if (strlen($_POST["password"]) == 0) {
+                # code...
+                echo "Te falto escribir tu clave de ingreso <br>";
+            }
+            if (strlen($_POST["email"]) == 0 ) {
+                # code...
+                echo "El campo email esta vacio <br>";
+            }
+            if (filter_var($_POST["email"],FILTER_VALIDATE_EMAIL)==false) {
+                echo "EL email no tiene el formato correcto <br>";
+            }
+            if (strlen($_POST["nombre"]) == 0 ) {
+                echo "El campo del nombre esta vacio<br>";
+            }
+            if (strlen($_POST["apellido"]) == 0 ) {
+                echo "El campo del apellido esta vacio<br>";
+            }
+            if (strlen($_POST["direccion"]) == 0 ) {
+                echo "La direccion esta vacia<br>";
+            }
+            if (!is_numeric($_POST["cod"])) {
+                echo "El código postal debe ser númerico<br>";
+            }
+            if (strlen($_POST["cod"]) == 0 ) {
+                echo "El código postal esta vacio<br>";
+            }
+            if($_POST["fecha"] > date("2014-m-d")){
+                echo "La fecha ingresada es incorrecta";
+            }
+            if ($_FILES["imagen"] ["error"] != 0) {
+                echo "Hubo un error en la imagen <br>";
+            } else {
+                $ext = pathinfo ($_FILES["imagen"] ["name"] , PATHINFO_EXTENSION);
+                if ($ext != "jpg" && $ext != "jpeg" && $ext != "png") {
+                    echo "El formato de la imagen debe ser jpg, jpeg o png <br>";
+                }
+            }
+}?></label>
                 </form>
             </div>
             <div class="container-fluid">

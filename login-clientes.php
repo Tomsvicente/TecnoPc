@@ -5,7 +5,6 @@ if ($_POST) {
     $email = $_POST["email"];
     $password = $_POST["password"];
 }
-
 ?>
 
 
