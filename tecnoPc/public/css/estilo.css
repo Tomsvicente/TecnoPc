@@ -130,7 +130,7 @@ h2 {
             overflow:hidden;
             padding: 10px 0px;
             border-bottom:1px solid #CCC;}
-        #acord  li a h4:hover, li .box h4:hover,li a h5:hover, li .box h5:hover  {background-color: #EEEEEE; 
+        #acord  li a h4:hover, li .box h4:hover,li a h5:hover, li .box h5:hover  {background-color: #EEEEEE;
             color:#FFFFFF; }
         #acord  .sub-categoria {cursor: pointer;
             width:90%;
@@ -470,9 +470,9 @@ footer .footer .box-right {
     float: left;
     width: 100%;
 }
-  #producto-detalle .precios_detalle{ width:100%; 
-    height:40px; 
-    color:#333333; 
+  #producto-detalle .precios_detalle{ width:100%;
+    height:40px;
+    color:#333333;
     float:left;
     font-size:23px;
     padding-bottom:0;  }
