@@ -21,3 +21,7 @@ Route::get('/contacto','contactoController@contacto');
 Route::get('/faq','faqcontroller@faq');
 Route::get('/perfil','perfilController@perfil');
 Route::get('/productoDetalle','productoController@producto');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

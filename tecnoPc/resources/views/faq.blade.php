@@ -1,5 +1,5 @@
 
-@extends("plantilla")
+@extends("layouts.plantilla")
 
 @section("title")
 FAQ
@@ -7,6 +7,7 @@ FAQ
 
 @section("section")
 
+                <main class="py-4">
 
                 <div class="container">
                         <div class="row margin_top90">
@@ -17,7 +18,7 @@ FAQ
                                 <div class="panel panel-default">
                                     <div class="panel-heading" role="tab" id="headingOne">
                                     <h6 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#acord" href="#id22" aria-expanded="true" aria-controls="collapseOne" style="color: #727272;">
+                                        <a role="button" data-toggle="collapse" data-parent="#acord" href="#id22" aria-expanded="true" aria-controls="collapseOne" style="color: #B12019">
                                         LISTA DE PRECIOS                    </a>
                                     </h6>
                                     </div>
@@ -31,7 +32,7 @@ FAQ
                                 <div class="panel panel-default">
                                     <div class="panel-heading" role="tab" id="headingOne">
                                     <h6 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#acord" href="#id17" aria-expanded="true" aria-controls="collapseOne" style="color: #727272;">
+                                        <a role="button" data-toggle="collapse" data-parent="#acord" href="#id17" aria-expanded="true" aria-controls="collapseOne" style="color: #B12019">
                                         NUESTRA EMPRESA                    </a>
                                     </h6>
                                     </div>
@@ -49,7 +50,7 @@ FAQ
                                 <div class="panel panel-default">
                                     <div class="panel-heading" role="tab" id="headingOne">
                                     <h6 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#acord" href="#id18" aria-expanded="true" aria-controls="collapseOne" style="color: #727272;">
+                                        <a role="button" data-toggle="collapse" data-parent="#acord" href="#id18" aria-expanded="true" aria-controls="collapseOne" style="color: #B12019">
                                         METODOS DE ENVÍO</a>
                                     </h6>
                                     </div>
@@ -63,7 +64,7 @@ FAQ
                                 <div class="panel panel-default">
                                     <div class="panel-heading" role="tab" id="headingOne">
                                     <h6 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#acord" href="#id19" aria-expanded="true" aria-controls="collapseOne" style="color: #727272;">
+                                        <a role="button" data-toggle="collapse" data-parent="#acord" href="#id19" aria-expanded="true" aria-controls="collapseOne" style="color: #B12019">
                                         FORMAS DE PAGO                    </a>
                                     </h6>
                                     </div>
@@ -77,19 +78,19 @@ FAQ
                                 <div class="panel panel-default">
                                     <div class="panel-heading" role="tab" id="headingOne">
                                     <h6 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#acord" href="#id21" aria-expanded="true" aria-controls="collapseOne" style="color: #727272;">
+                                        <a role="button" data-toggle="collapse" data-parent="#acord" href="#id21" aria-expanded="true" aria-controls="collapseOne" style="color: #B12019">
                                         GARANTIA                    </a>
                                       </h6>
                                     </div>
                                     <div id="id21" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
                                     <div class="panel-body">
-                                    Todos nuestros productos cuentan con garantia .LA GARANTIA SE CUBRE EN EL LOCAL Y LOS GASTOS DE DESPACHO SON A CARGO DEL CLIENTE  La garantía no es aplicable, si
+                                    "Todos nuestros productos cuentan con garantia .LA GARANTIA SE CUBRE EN EL LOCAL Y LOS GASTOS DE DESPACHO SON A CARGO DEL CLIENTE  La garantía no es aplicable, si
                     El periodo de garantía ha expirado,
                     La etiqueta de garantía está rota o ha sido retirada,
                     La etiqueta del número de serie ha desaparecido o está irreconocible,
                     El producto ha sido modificado o reparado por algún centro de servicio o persona no autorizados
                     El defecto se ha producido debido al maltrato, al uso indebido no conforme a las instrucciones del manual, o la exposición a condiciones ambientales más graves de las especificadas en el manual y las especificaciones.
-                    El defecto fue originado por una fuerza de causa mayor, tales como causas naturales, inundaciones, relámpagos, terremotos, guerra, vandalismo, robo, bajadas de tensión eléctrica (daño debido a interrupciones en la alimentación eléctrica)                  </div>
+                    El defecto fue originado por una fuerza de causa mayor, tales como causas naturales, inundaciones, relámpagos, terremotos, guerra, vandalismo, robo, bajadas de tensión eléctrica (daño debido a interrupciones en la alimentación eléctrica)"               </div>
                                     </div>
                                   </div>
                                   <!-- fin panel default-->
@@ -97,5 +98,7 @@ FAQ
                             </div>
                         </div>
                     </div>
+
+                  </main>
 
 @endsection

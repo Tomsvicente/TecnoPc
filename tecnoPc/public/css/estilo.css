@@ -153,6 +153,10 @@ h2 {
 
         /* Body */
 
+html{
+          position: relative;
+        }
+
 *{
     margin: 0;
     padding: 0;
@@ -199,7 +203,10 @@ ul{
 li{
     list-style-type: none !important;
 }
-
+.container-fluid{
+  padding-left: 0;
+  padding-right: 0;
+}
 /*Fin soobrescritura */
 
 .buscador{ width: 100%;
@@ -343,25 +350,39 @@ color: #333;
 }
 /* registro*/
 label {
-    color: white;
+    color: #B12019;
 }
 
 #errores {
     display: block;
 }
+h6 .panel-title{
+  color: #B12019;
 
-.box-registro{
+}
+
+.panel-group{
+  font-family: 'Roboto', sans-serif;
+  font-weight:bold;
+
+}
+.card{
     background: rgb(56, 55, 55);
     width: 500px;
-    color: white;
+    color: #B12019;
     border: 10px solid rgb(146, 30, 30);
-    padding: 50px;
+    padding: auto;
     margin:auto;
-    margin-top: 50px;
+    margin-top: auto;
+    font-family: 'Roboto', sans-serif;
+   font-weight: bold;
+}
+card-header{
+  color: #B12019;
 }
 .btn-success{
     margin-top: 10px;
-    background-color: red;
+    background-color: #B12019;
     border: rgb(146, 30, 30);
 }
 .box-login a{
@@ -424,8 +445,13 @@ label {
 }
 .perfil-body{
     background:#222;
+    margin: auto;
 }
 
+.py-4 {
+  background: url(../img/celdas.jpg) no-repeat;
+  color: whitesmoke;
+}
 
 /* Footer */
 
@@ -433,12 +459,13 @@ footer {
     background: url(../img/dark_background1.jpg) no-repeat;
     width: 100%;
     float: left;
-    height: 200px;
+    height: 30%;
     background-size:100% 100%;
-    margin-top:60px;
+    position: absolute;
+    bottom: 0;
 }
 footer .footer .box-right {
-    float:left;
+
     width: 100%;
     margin-top:30px;
 }
