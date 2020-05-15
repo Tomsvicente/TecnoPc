@@ -11,6 +11,13 @@
 |
 */
 
+//use Symfony\Component\Routing\Route;
+use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/home','inicioController@inicio');
+Route::get('/contacto','contactoController@contacto');
+Route::get('/faq','faqcontroller@faq');
+Route::get('/perfil','perfilController@perfil');
+Route::get('/productoDetalle','productoController@producto');
