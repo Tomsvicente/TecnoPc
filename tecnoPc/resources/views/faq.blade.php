@@ -1,5 +1,5 @@
 
-@extends("plantilla")
+@extends("layouts.plantilla")
 
 @section("title")
 FAQ
@@ -7,7 +7,7 @@ FAQ
 
 @section("section")
 
-
+              <main class="py-4">
                 <div class="container">
                         <div class="row margin_top90">
                             <div class="col-md-12">
@@ -17,7 +17,7 @@ FAQ
                                 <div class="panel panel-default">
                                     <div class="panel-heading" role="tab" id="headingOne">
                                     <h6 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#acord" href="#id22" aria-expanded="true" aria-controls="collapseOne" style="color: #727272;">
+                                        <a role="button" data-toggle="collapse" data-parent="#acord" href="#id22" aria-expanded="true" aria-controls="collapseOne" style="color: #B12019;">
                                         LISTA DE PRECIOS                    </a>
                                     </h6>
                                     </div>
@@ -31,7 +31,7 @@ FAQ
                                 <div class="panel panel-default">
                                     <div class="panel-heading" role="tab" id="headingOne">
                                     <h6 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#acord" href="#id17" aria-expanded="true" aria-controls="collapseOne" style="color: #727272;">
+                                        <a role="button" data-toggle="collapse" data-parent="#acord" href="#id17" aria-expanded="true" aria-controls="collapseOne" style="color: #B12019;">
                                         NUESTRA EMPRESA                    </a>
                                     </h6>
                                     </div>
@@ -49,7 +49,7 @@ FAQ
                                 <div class="panel panel-default">
                                     <div class="panel-heading" role="tab" id="headingOne">
                                     <h6 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#acord" href="#id18" aria-expanded="true" aria-controls="collapseOne" style="color: #727272;">
+                                        <a role="button" data-toggle="collapse" data-parent="#acord" href="#id18" aria-expanded="true" aria-controls="collapseOne" style="color: #B12019;">
                                         METODOS DE ENVÍO</a>
                                     </h6>
                                     </div>
@@ -63,7 +63,7 @@ FAQ
                                 <div class="panel panel-default">
                                     <div class="panel-heading" role="tab" id="headingOne">
                                     <h6 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#acord" href="#id19" aria-expanded="true" aria-controls="collapseOne" style="color: #727272;">
+                                        <a role="button" data-toggle="collapse" data-parent="#acord" href="#id19" aria-expanded="true" aria-controls="collapseOne" style="color: #B12019;">
                                         FORMAS DE PAGO                    </a>
                                     </h6>
                                     </div>
@@ -77,7 +77,7 @@ FAQ
                                 <div class="panel panel-default">
                                     <div class="panel-heading" role="tab" id="headingOne">
                                     <h6 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#acord" href="#id21" aria-expanded="true" aria-controls="collapseOne" style="color: #727272;">
+                                        <a role="button" data-toggle="collapse" data-parent="#acord" href="#id21" aria-expanded="true" aria-controls="collapseOne" style="color: #B12019;">
                                         GARANTIA                    </a>
                                       </h6>
                                     </div>
@@ -97,5 +97,7 @@ FAQ
                             </div>
                         </div>
                     </div>
+                  </main>
+
 
 @endsection

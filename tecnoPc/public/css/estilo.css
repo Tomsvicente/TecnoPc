@@ -76,6 +76,11 @@ ul{    list-style-type: none !important}
 h2 {
     font-size: 30px;
     font-family: inherit;
+    color: #B12019;
+}
+
+.panel-body{
+  color: whitesmoke;
 }
 
 .carrito{ float:right; padding:5px; color:#FFF; width:135px; background:#333;
@@ -153,6 +158,10 @@ h2 {
 
         /* Body */
 
+html {
+    position: relative;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -198,6 +207,11 @@ ul{
 
 li{
     list-style-type: none !important;
+}
+
+.container-fluid{
+  padding-left: 0;
+  padding-right: 0;
 }
 
 /*Fin soobrescritura */
@@ -343,27 +357,35 @@ color: #333;
 }
 /* registro*/
 label {
-    color: white;
+    color: #B12019;
 }
 
 #errores {
     display: block;
 }
 
-.box-registro{
+.card{
     background: rgb(56, 55, 55);
     width: 500px;
-    color: white;
+    color: #B12019;
     border: 10px solid rgb(146, 30, 30);
-    padding: 50px;
+    padding: auto;
     margin:auto;
-    margin-top: 50px;
+    margin-top: auto;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
 }
+
+.card-header{
+  color: #B12019;
+}
+
 .btn-success{
     margin-top: 10px;
-    background-color: red;
+    background-color: #B12019;
     border: rgb(146, 30, 30);
 }
+
 .box-login a{
     color: red;
 
@@ -426,6 +448,10 @@ label {
     background:#222;
 }
 
+.py-4 {
+  background: url(../img/celdas.jpg) no-repeat;
+}
+
 
 /* Footer */
 
@@ -433,12 +459,13 @@ footer {
     background: url(../img/dark_background1.jpg) no-repeat;
     width: 100%;
     float: left;
-    height: 200px;
+    height: 30%;
     background-size:100% 100%;
-    margin-top:60px;
+    margin-top: auto;
+    position: absolute;
+    bottom: 0;
 }
 footer .footer .box-right {
-    float:left;
     width: 100%;
     margin-top:30px;
 }
