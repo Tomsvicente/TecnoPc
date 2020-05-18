@@ -32,6 +32,12 @@
     float: left;
     line-height: 23px;
 }
+
+#navbarDropdown{
+  font-size: 20px;
+    font-weight: bold;
+}
+
 .cont-nav ul li.strong {
     float: left;
     width: 100%;
@@ -357,7 +363,7 @@ color: #333;
 }
 /* registro*/
 label {
-    color: #B12019;
+    color: whitesmoke;
 }
 
 #errores {
@@ -412,6 +418,17 @@ label {
     padding: 50px;
     margin:auto;
     margin-top: 50px;
+}
+.perfil-imagen{
+  display: block;
+  color: whitesmoke;
+}
+
+div.texto-imagen{
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+  width: 120px;
 }
 .bt{
     display: block;
