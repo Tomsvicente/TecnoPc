@@ -6,5 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class payment extends Model
 {
-    //
+    protected $guarded = [];
+    public $timestamp =true;
 }
