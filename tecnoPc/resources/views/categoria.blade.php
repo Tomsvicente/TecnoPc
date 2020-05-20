@@ -1,7 +1,7 @@
 @extends("layouts.plantilla")
 
 @section("title")
-Inicio
+
 @endsection
 
 @section("section")
@@ -24,14 +24,8 @@ Inicio
                                 </div>
                             </li>
                         </a>
-                        <a style="color:#E90523 !important" href="">
-                            <li style="color:#f19800 !important">
-                                <div class="box">
-                                    <h4 style="color:#f19800 !important; font-weight:bold">TIEMPO DE DESCUENTO</h4>
-                                </div>
-                            </li>
-                        </a>
-                        <a href="categoria">
+
+                        <a href="categoria/{{$id}}">
                             <li>
                                 <div class="box">
                                     <h3>OUTLET</h3>
@@ -39,7 +33,7 @@ Inicio
                                 </div>
                             </li>
                         </a>
-                        <a href="">
+                        <a href="categoria/{{$id}}">
                             <li>
                                 <div class="box">
                                     <h3>CONSOLAS DE JUEGOS</h3>
@@ -49,7 +43,7 @@ Inicio
                                 </ul>
                             </li>
                         </a>
-                        <a href="">
+                        <a href="categoria/{{$id}}">
                             <li>
                                 <div class="box">
                                     <h3>TABLET</h3>
@@ -59,7 +53,7 @@ Inicio
                                 </ul>
                             </li>
                         </a>
-                        <a href="">
+                        <a href="categoria/{{$id}}">
                             <li>
                                 <div class="box">
                                     <h3>VIDEOJUEGOS</h3>
@@ -69,7 +63,7 @@ Inicio
                                 </ul>
                             </li>
                         </a>
-                        <a href="">
+                        <a href="categoria/{{$id}}">
                             <li>
                                 <div class="box">
                                     <h3>HERRAMIENTAS</h3>
@@ -79,7 +73,7 @@ Inicio
                                 </ul>
                             </li>
                         </a>
-                        <a href="">
+                        <a href="categoria/{{$id}}">
                             <li>
                                 <div class="box">
                                     <h3>CELULARES</h3>
@@ -89,7 +83,7 @@ Inicio
                                 </ul>
                             </li>
                         </a>
-                        <a href="">
+                        <a href="categoria/{{$id}}">
                             <li>
                                 <div class="box">
                                     <h3>COMPUTACIÓN</h3>
@@ -99,7 +93,7 @@ Inicio
                                 </ul>
                             </li>
                         </a>
-                        <a href="">
+                        <a href="categoria/{{$id}}">
                             <li>
                                 <div class="box">
                                     <h3>POWER BANK Y PILAS</h3>
@@ -109,7 +103,7 @@ Inicio
                                 </ul>
                             </li>
                         </a>
-                        <a href="">
+                        <a href="categoria/{{$id}}">
                             <li>
                                 <div class="box">
                                     <h3>REPUESTOS NOTEBOOK</h3>
@@ -119,7 +113,7 @@ Inicio
                                 </ul>
                             </li>
                         </a>
-                        <a href="">
+                        <a href="categoria/{{$id}}">
                             <li>
                                 <div class="box">
                                     <h3>AURICULARES Y MP3</h3>
@@ -129,7 +123,7 @@ Inicio
                                 </ul>
                             </li>
                         </a>
-                        <a href="">
+                        <a href="categoria/{{$id}}">
                             <li>
                                 <div class="box">
                                     <h3>BAZAR</h3>
@@ -139,7 +133,7 @@ Inicio
                                 </ul>
                             </li>
                         </a>
-                        <a href="">
+                        <a href="categoria/{{$id}}">
                             <li>
                                 <div class="box">
                                     <h3>ILUMINACIÓN</h3>
@@ -149,7 +143,7 @@ Inicio
                                 </ul>
                             </li>
                         </a>
-                        <a href="">
+                        <a href="categoria/{{$id}}">
                             <li>
                                 <div class="box">
                                     <h3>ELECTRONICA</h3>

@@ -243,6 +243,69 @@ li{
     bottom:3px;
     position:absolute;}
 
+    /*Errores */
+
+
+
+/* The message box is shown when the user clicks on the password field */
+#nombreError{
+  display:none;
+  background: rgb(56, 55, 55);
+  color: whitesmoke;
+  position: relative;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 10px 35px;
+  font-size: 18px;
+}
+#apellidoError{
+  display:none;
+  background: rgb(56, 55, 55);
+  color: whitesmoke;
+  position: relative;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 10px 35px;
+  font-size: 18px;
+}
+
+#mensaje {
+  display:none;
+  background: rgb(56, 55, 55);
+  color: whitesmoke;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#mensaje p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -20px;
+  content: "\2713";
+}
+
+/* Add a red text color and an "x" icon when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -20px;
+  content: "\00d7";
+}
+
+
 /* Productos */
 
 .producto_destacado{

@@ -65,18 +65,7 @@ Perfil
                           </div>
                       </div>
 
-                      <div class="form-group">
-
-                          <div class="col-xs-6">
-                            <label for="domicilio"><h4>Domicilio</h4></label>
-                              <input type="domicilio" value="{{ $usuario ->domicilio }}" class="form-control @error('domicilio') is-invalid @enderror" name="domicilio" id="domicilio" placeholder="{{ $usuario ->domicilio}}" title="Colocá tu direccion">
-                                @error('domicilio')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                          </div>
-                        </div>
+                      
                       <div class="form-group">
 
                           <div class="col-xs-6">

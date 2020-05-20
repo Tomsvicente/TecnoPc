@@ -15,7 +15,7 @@
                 <div class="card-header">{{ __('Registrarse') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('register') }}" name="registro">
                         @csrf
 
                         <div class="form-group row">
@@ -31,7 +31,9 @@
                                 @enderror
                             </div>
                         </div>
-
+                        <div id="nombreError">
+                          <p id="nombre" class="invalid">Primera letra mayusculas y minusculas</b> </p>
+                        </div>
                         <div class="form-group row">
                             <label for="surname" class="col-md-4 col-form-label text-md-right">{{ __('Apellido') }}</label>
 
@@ -45,7 +47,9 @@
                                 @enderror
                             </div>
                         </div>
-
+                        <div id="apellidoError">
+                          <p id="apellido" class="invalid">Primera letra mayusculas y minusculas</b> </p>
+                        </div>
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail') }}</label>
 
@@ -64,7 +68,7 @@
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Contraseña') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                <input id="password" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -78,7 +82,7 @@
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Repetir Contraseña') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                <input id="password-confirm" type="password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
 
@@ -91,9 +95,17 @@
                         </div>
                     </form>
                 </div>
+                  <div id="mensaje">
+        <h3>La contraseña debe poseer los siguientes datos:</h3>
+        <p id="minus" class="invalid">Una letra <b>Mnúscula</b> </p>
+        <p id="mayus" class="invalid">Una letra <b>Mayúscula</b> </p>
+        <p id="numero" class="invalid">Un <b>Número</b></p>
+        <p id="largo" class="invalid">Un mínimo de <b>8 carácteres</b></p>
+        </div>
             </div>
         </div>
     </div>
 </div>
 </main>
+
 @endsection

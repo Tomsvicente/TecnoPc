@@ -20,10 +20,13 @@ Route::get('/contacto','contactoController@contacto');
 Route::get('/faq','faqcontroller@faq');
 Route::get('/productoDetalle','productoController@producto');
 
+Route::get('/categoria/{$id}' , 'categoriaController@listado');
+
+
 Route::get('/perfil','perfilController@index')->name('perfil');
 Route::post('/perfil', 'perfilController@CargaAvatar');
-Route::get('/perfil',  'perfilController@editar');
-Route::post('/perfil',  'perfilController@actualizar');
+// Route::get('/perfil',  'perfilController@editar');
+// Route::post('/perfil',  'perfilController@actualizar');
 
 Auth::routes();
 
