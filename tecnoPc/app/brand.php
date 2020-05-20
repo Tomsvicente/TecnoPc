@@ -7,4 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class brand extends Model
 {
     //
+    protected $guarded = [];
+    public $timestamp =true;
 }

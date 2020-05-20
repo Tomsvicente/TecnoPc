@@ -32,6 +32,12 @@
     float: left;
     line-height: 23px;
 }
+
+#navbarDropdown{
+  font-size: 20px;
+    font-weight: bold;
+}
+
 .cont-nav ul li.strong {
     float: left;
     width: 100%;
@@ -76,6 +82,11 @@ ul{    list-style-type: none !important}
 h2 {
     font-size: 30px;
     font-family: inherit;
+    color: #B12019;
+}
+
+.panel-body{
+  color: whitesmoke;
 }
 
 .carrito{ float:right; padding:5px; color:#FFF; width:135px; background:#333;
@@ -153,6 +164,10 @@ h2 {
 
         /* Body */
 
+html {
+    position: relative;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -200,6 +215,11 @@ li{
     list-style-type: none !important;
 }
 
+.container-fluid{
+  padding-left: 0;
+  padding-right: 0;
+}
+
 /*Fin soobrescritura */
 
 .buscador{ width: 100%;
@@ -222,6 +242,69 @@ li{
     border:0;
     bottom:3px;
     position:absolute;}
+
+    /*Errores */
+
+
+
+/* The message box is shown when the user clicks on the password field */
+#nombreError{
+  display:none;
+  background: rgb(56, 55, 55);
+  color: whitesmoke;
+  position: relative;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 10px 35px;
+  font-size: 18px;
+}
+#apellidoError{
+  display:none;
+  background: rgb(56, 55, 55);
+  color: whitesmoke;
+  position: relative;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 10px 35px;
+  font-size: 18px;
+}
+
+#mensaje {
+  display:none;
+  background: rgb(56, 55, 55);
+  color: whitesmoke;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#mensaje p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -20px;
+  content: "\2713";
+}
+
+/* Add a red text color and an "x" icon when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -20px;
+  content: "\00d7";
+}
+
 
 /* Productos */
 
@@ -343,27 +426,35 @@ color: #333;
 }
 /* registro*/
 label {
-    color: white;
+    color: whitesmoke;
 }
 
 #errores {
     display: block;
 }
 
-.box-registro{
+.card{
     background: rgb(56, 55, 55);
     width: 500px;
-    color: white;
+    color: #B12019;
     border: 10px solid rgb(146, 30, 30);
-    padding: 50px;
+    padding: auto;
     margin:auto;
-    margin-top: 50px;
+    margin-top: auto;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
 }
+
+.card-header{
+  color: #B12019;
+}
+
 .btn-success{
     margin-top: 10px;
-    background-color: red;
+    background-color: #B12019;
     border: rgb(146, 30, 30);
 }
+
 .box-login a{
     color: red;
 
@@ -390,6 +481,17 @@ label {
     padding: 50px;
     margin:auto;
     margin-top: 50px;
+}
+.perfil-imagen{
+  display: block;
+  color: whitesmoke;
+}
+
+div.texto-imagen{
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+  width: 120px;
 }
 .bt{
     display: block;
@@ -426,6 +528,10 @@ label {
     background:#222;
 }
 
+.py-4 {
+  background: url(../img/celdas.jpg) no-repeat;
+}
+
 
 /* Footer */
 
@@ -433,12 +539,13 @@ footer {
     background: url(../img/dark_background1.jpg) no-repeat;
     width: 100%;
     float: left;
-    height: 200px;
+    height: 30%;
     background-size:100% 100%;
-    margin-top:60px;
+    margin-top: auto;
+    position: absolute;
+    bottom: 0;
 }
 footer .footer .box-right {
-    float:left;
     width: 100%;
     margin-top:30px;
 }

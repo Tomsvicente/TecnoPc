@@ -16,13 +16,19 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
+            $table->string('surname');
+            $table->string('direccion');
             $table->string('email')->unique();
+            $table->string('avatar')->default('default.jpg');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+            $table->boolean('is_admin')->default(0);
         });
     }
+
+
 
     /**
      * Reverse the migrations.

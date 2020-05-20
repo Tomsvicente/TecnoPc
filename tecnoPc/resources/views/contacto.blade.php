@@ -1,4 +1,4 @@
-@extends("plantilla")
+@extends("layouts.plantilla")
 
 @section("title")
 Contacto
@@ -7,7 +7,7 @@ Contacto
 @section("section")
 
 
-    
+  <main class="py-4">
     <section class="container">
     <div class="row cliente-contacto">
         <div class="col-6 ">
@@ -38,4 +38,6 @@ Contacto
     </form>
     <div>
     </section>
+  </main>
+
 @endsection

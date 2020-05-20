@@ -1,4 +1,4 @@
-@extends("plantilla")
+@extends("layouts.plantilla")
 
 @section("title")
 TecnoPC
@@ -7,7 +7,7 @@ TecnoPC
 @section("section")
 
 
-        <div class="container">
+          <div class="container">
                 <div class="row margin_top90">
                     <div class="col-md-6">
                         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -45,4 +45,5 @@ TecnoPC
                                     </div>
                     </div><!-- fin info producto -->
                 </div>
+
 @endsection
