@@ -11,6 +11,7 @@ FAQ
                 <div class="container">
                         <div class="row margin_top90">
                             <div class="col-md-12">
+                            
                                 <h2>Preguntas Frecuentes</h2>
                                 <div class="panel-group" id="acord" role="tablist" aria-multiselectable="true">
                                             <!-- inicio-->

@@ -2,7 +2,14 @@
 
 namespace App\Http\Controllers;
 
+
+use App\Cart;
 use Illuminate\Http\Request;
+use App\Product;
+use App\Category;
+use Session;
+use Auth;
+
 
 class HomeController extends Controller
 {
@@ -23,6 +30,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('inicio');
+        return view('inicio', array('usuario' => Auth::user()),['categorias' => $categorias]);
     }
 }

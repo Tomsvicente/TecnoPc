@@ -11,6 +11,7 @@
     position: relative;
     left: -15px;
     overflow: hidden;}
+
 	.titulo_pd  strong {
     color: #ffffff;
     font-size: 18px;
@@ -75,6 +76,11 @@
         border-top-left-radius: 5px;
         margin:0px;}
 
+.badge{
+  font-size: 100%;
+  float: center;
+}
+
 li{list-style:none !important; }
 
 ul{    list-style-type: none !important}
@@ -89,14 +95,19 @@ h2 {
   color: whitesmoke;
 }
 
+.page{
+  margin-top: 3%;
+  margin-bottom: 2%;
+}
+
 .carrito{ float:right; padding:5px; color:#FFF; width:135px; background:#333;
-    font-size:12px !important; margin-left: 5px ; border:1px solid #FFFFFF; border-radius:5px}
+    font-size:11px !important; margin-left: 5px ; border:1px solid #FFFFFF; border-radius:5px}
     .carrito a{ color:#FFF;}
     .carrito_icono{ width:25px; float:left;}
     .carrito_icono img{ width:100%; border:0;}
     .carrito_cont_texto{width:80px; margin-left:10px; float:left;}
     .carrito_texto1{ width:100%;  float:left; text-align:left;}
-    .carrito_texto2{width:100%; float:left;text-align:center;}
+    .carrito_texto2{width:100%; float:left;}
 
 #acord {margin-top: 25px;}
 
@@ -112,9 +123,9 @@ h2 {
             width: 100%;}
         #acord li .box h3{float:left;
             border-bottom:1px solid #D1D1D1;
-            color: #666 !important;
+            color: #B12019 !important;
             cursor: pointer;
-            font-weight: 400;
+            font-weight: bold;
             text-transform:uppercase;
             font-size: 15px;
             float: left;
@@ -222,30 +233,7 @@ li{
 
 /*Fin soobrescritura */
 
-.buscador{ width: 100%;
-    top: 10px;
-    padding: 3px 1%;
-    margin-left: 4%;
-    float: left;
-    border-radius: 5px;
-    border: 1px solid #999;
-    margin-bottom: 30px;
-    box-shadow: 2px 2px 2px #666;
-	position:relative;
-	font-size:16px;}
-
-.bs-text{ width:94%; border:0; background:none; font-family: 'Roboto', sans-serif; margin-bottom:5px;}
-
-.lupita{ width:24px;
-    height:24px;
-    background:url(../img/lupa.jpg) no-repeat;
-    border:0;
-    bottom:3px;
-    position:absolute;}
-
-    /*Errores */
-
-
+/*Productos */
 
 /* The message box is shown when the user clicks on the password field */
 #nombreError{
@@ -531,6 +519,614 @@ div.texto-imagen{
 .py-4 {
   background: url(../img/celdas.jpg) no-repeat;
 }
+
+/* Buscador */
+
+
+/*
+* The r-text-field component
+*/
+
+/*
+The component will reset input browser styles
+*/
+
+.r-text-field{
+  --uiTextFieldPlaceholderColor: var(--textFieldPlaceholderColor);
+
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  border-radius: 0;
+  border-style: solid;
+}
+
+.r-text-field::-webkit-input-placeholder{
+  color: var(--uiTextFieldPlaceholderColor);
+}
+
+.r-text-field::-moz-placeholder{
+  opacity: 1;
+  color: var(--uiTextFieldPlaceholderColor);
+}
+
+.r-text-field:invalid{
+  outline: none;
+  box-shadow: none;
+}
+
+/*
+* The r-button component
+*/
+
+/*
+The component will reset button browser styles
+*/
+
+.r-button{
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Remove the inner border and padding in Firefox. */
+
+.r-button::-moz-focus-inner,
+.r-button[type="button"]::-moz-focus-inner,
+.r-button[type="reset"]::-moz-focus-inner,
+.r-button[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+
+/*
+* The a-field component
+*/
+
+/*
+ 1. The --aFieldHeight option defines an input height. And this option is needed for calculations of a hint final position
+ 2. The --aFieldHintFinalCoordinate option defines calculations of the final Y-axis coordinate
+ 3. The —aFieldPaddingLeft option defines left indent for a hint and query text
+*/
+
+.a-field{
+  --uiaFieldHeight: var(--aFieldHeight);
+  --uiaFieldHintFinalCoordinate: var(--aFieldHintFinalCoordinate, var(--uiaFieldHeight));
+  --uiaFieldPaddingLeft: var(--aFieldPaddingLeft);
+
+  position: relative;
+  padding-top: calc(var(--uiaFieldHintFinalCoordinate) - var(--uiaFieldHeight)); /* 1, 2 */
+}
+
+.a-field__input{
+  box-sizing: border-box;
+  height: var(--uiaFieldHeight); /* 1 */
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: var(--uiaFieldPaddingLeft); /* 3 */
+}
+
+.a-field__input::-webkit-input-placeholder{
+  opacity: 0;
+  transition: opacity .2s ease-out;
+}
+
+.a-field__input::-moz-placeholder{
+  opacity: 0;
+}
+
+.a-field__input:focus::-webkit-input-placeholder{
+  opacity: 1;
+  transition-delay: .2s;
+}
+
+.a-field__input:focus::-moz-placeholder{
+  opacity: 1;
+}
+
+.a-field__label-wrap{
+  box-sizing: border-box;
+  width: 100%;
+  height: var(--uiaFieldHeight);	/* 1 */
+  pointer-events: none;
+  cursor: text;
+  position: absolute;
+  color: #B12019;
+  font-weight: bold;
+  left: 0;
+}
+
+.a-field__label{
+  position: absolute;
+  left: var(--uiaFieldPaddingLeft); /* 3 */
+  bottom: calc(50% - .5em);
+  line-height: 1;
+  pointer-events: none;
+}
+
+/*
+  I needed to create an animation onle Chromium broswers because:
+  1. Firefox doesn't support a placeholder animation
+  2. I couldn't make an correct animation at Edge
+*/
+
+@supports (-webkit-appearance: none){
+
+  .a-field__label{
+    transition: bottom .2s cubic-bezier(0.9,-0.15, 0.1, 1.15), opacity .2s ease-out;
+    will-change: bottom, opacity;
+  }
+}
+
+/* If a user had inserted a text of query a hint will be hidden */
+
+.a-field__input:not(:placeholder-shown) ~ .a-field__label-wrap .a-field__label{
+  opacity: 0;
+  bottom: 85%;
+}
+
+/* If the focal point is a field a hint will be displayed */
+
+.a-field__input:focus ~ .a-field__label-wrap .a-field__label{
+  opacity: 1;
+  bottom: var(--uiaFieldHintFinalCoordinate); /* 2 */
+}
+
+/*
+* the search component
+*/
+
+.search{
+  --searchFieldHeight: 50px;
+  --searchButtonSize: var(--searchFieldHeight);
+  --textFieldPlaceholderColor: #B12019;
+
+  --aFieldHeight: var(--searchFieldHeight);
+  /* The 10px value has been calculated for this demo and you can change it */
+  --aFieldHintFinalCoordinate: calc(var(--searchFieldHeight) + 10px);
+  --aFieldPaddingLeft: 30px;
+  left: 4%;
+  color: #B12019;
+  position: relative;
+}
+
+/*
+ 1. I needed to set the currentColor value for correct displaying a border on iOS devices
+*/
+
+.search__input{
+  width: 100%;
+  border-width: 3px;
+  border-color: currentColor; /* 1 */
+
+  border-radius: 25px;
+  background-color: transparent;
+
+  font-size: 18px;
+  color: currentColor;
+}
+
+.search__input:focus{
+  outline: none;
+}
+
+.search__hint{
+  font-size: 16px;
+}
+
+.search__button{
+  color: currentColor;
+}
+
+.search__button:focus{
+  outline: none;
+}
+
+.search__clear{
+  width: 1em;
+  height: 1em;
+  font-size: var(--searchButtonSize);
+
+  position: absolute;
+  bottom: 0;
+  display: none;
+}
+
+/* If a user starts typing a clearing button will be displayed */
+
+.search__input:not(:placeholder-shown) ~ .search__clear{
+  display: block;
+}
+
+/* If the focal point is a clearing button the hint will be displayed */
+
+.search__clear:focus ~ .a-field__label-wrap .a-field__label{
+  opacity: 1;
+  bottom: var(--aFieldHintFinalCoordinate);
+}
+
+.search__clear-label{
+  position: absolute;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.search__icon{
+  fill: currentColor;
+  display: block;
+
+  box-sizing: border-box;
+  width: 1.5em;
+  height: 1.5em;
+  padding: .25em;
+
+  position: absolute;
+  top: calc(50% - .75em);
+  left: calc(50% - .75em);
+}
+
+.search__button:focus .search__icon{
+  box-shadow: 0 0 0 3px currentColor;
+}
+
+.search__icon-clear{
+  font-size: 18px;
+}
+
+@media (max-width: 640px){
+
+  .search__input{
+    padding-right: 50px;
+  }
+
+  .search__clear{
+    right: 10px;
+  }
+
+  .search__submit{
+    display: block;
+    width: 100%;
+    padding: 12px 15px;
+
+    background-color: #fff;
+    text-transform: uppercase;
+    color: #5f27cd;
+    border-radius: 25px;
+    margin-top: 25px;
+  }
+
+  .search__submit:focus{
+    box-shadow: 0 0 0 3px currentColor;
+    color: #422380;
+  }
+
+  .search__icon-search{
+    display: none;
+  }
+}
+
+@media (min-width: 641px){
+
+  .search__input{
+    padding-right: 115px;
+  }
+
+  .search__clear{
+    right: var(--searchButtonSize);
+  }
+
+  .search__submit{
+    width: 1em;
+    height: 1em;
+    font-size: var(--searchButtonSize);
+
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+  }
+
+  .search__submit-label{
+    position: absolute;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+  }
+
+  .search__icon-search{
+    font-size: 22px;
+  }
+}
+
+/* Producto*/
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.align-center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.flex-centerY-centerX {
+  justify-content: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+body {
+  background-color: #f7f7f7;
+}
+
+.page-wrapper {
+  height: 100%;
+  display: table;
+}
+
+.page-wrapper .page-inner {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.el-wrapper {
+  width: 33%;
+  padding: 15px;
+  margin: 0;
+  background-color: #f7f7f7;
+  float: left;
+}
+
+@media (max-width: 991px) {
+  .el-wrapper {
+    width: 345px;
+  }
+}
+
+@media (max-width: 767px) {
+  .el-wrapper {
+    width: 290px;
+    margin: 30px auto;
+  }
+}
+
+.el-wrapper:hover .h-bg {
+  left: 0px;
+}
+
+.el-wrapper:hover .price {
+  left: 20px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: #B12019;
+  font-weight: bold;
+}
+
+.el-wrapper:hover .add-to-cart {
+  left: 60%;
+}
+
+.el-wrapper:hover .img {
+  webkit-filter: blur(7px);
+  -o-filter: blur(7px);
+  -ms-filter: blur(7px);
+  filter: blur(7px);
+  filter: progid:DXImageTransform.Microsoft.Blur(pixelradius='7', shadowopacity='0.0');
+  opacity: 0.4;
+}
+
+.el-wrapper:hover .info-inner {
+  bottom: 155px;
+}
+
+.el-wrapper:hover .a-size {
+  -webkit-transition-delay: 300ms;
+  -o-transition-delay: 300ms;
+  transition-delay: 300ms;
+  bottom: 50px;
+  opacity: 1;
+}
+
+.el-wrapper .box-down {
+  width: 100%;
+  height: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.el-wrapper .box-up {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.el-wrapper .img {
+  padding: 20px 0;
+  -webkit-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+  -moz-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+  -o-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+  transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+  /* ease-out */
+  -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+  -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+  -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+  transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+  /* ease-out */
+}
+
+.h-bg {
+  -webkit-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+  -moz-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+  -o-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+  transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+  /* ease-out */
+  -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+  -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+  -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+  transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+  /* ease-out */
+  width: 660px;
+  height: 100%;
+  background-color: #B12019;
+  position: absolute;
+  left: -659px;
+}
+
+.h-bg .h-bg-inner {
+  width: 50%;
+  height: 100%;
+  background-color: #464646;
+}
+
+.info-inner {
+  -webkit-transition: all 400ms cubic-bezier(0, 0, 0.18, 1);
+  -moz-transition: all 400ms cubic-bezier(0, 0, 0.18, 1);
+  -o-transition: all 400ms cubic-bezier(0, 0, 0.18, 1);
+  transition: all 400ms cubic-bezier(0, 0, 0.18, 1);
+  /* ease-out */
+  -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+  -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+  -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+  transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+  /* ease-out */
+  position: absolute;
+  width: 100%;
+  bottom: 25px;
+}
+
+.info-inner .p-name,
+.info-inner .p-company {
+  display: block;
+}
+
+.info-inner .p-name {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 18px;
+  color: #B12019;
+  font-weight: bold;
+}
+
+.info-inner .p-company {
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #B12019;
+}
+
+.a-size {
+  -webkit-transition: all 300ms cubic-bezier(0, 0, 0.18, 1);
+  -moz-transition: all 300ms cubic-bezier(0, 0, 0.18, 1);
+  -o-transition: all 300ms cubic-bezier(0, 0, 0.18, 1);
+  transition: all 300ms cubic-bezier(0, 0, 0.18, 1);
+  /* ease-out */
+  -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+  -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+  -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+  transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+  /* ease-out */
+  position: absolute;
+  width: 100%;
+  bottom: -20px;
+  font-family: 'PT Sans', sans-serif;
+  color: black;
+  opacity: 0;
+}
+
+.a-size .size {
+  color: #B12019;
+}
+
+.cart {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+}
+
+.cart .price {
+  -webkit-transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
+  -moz-transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
+  -o-transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
+  transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
+  /* ease-out */
+  -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+  -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+  -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+  transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+  /* ease-out */
+  -webkit-transition-delay: 100ms;
+  -o-transition-delay: 100ms;
+  transition-delay: 100ms;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  color: #252525;
+}
+
+.cart .add-to-cart {
+  -webkit-transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
+  -moz-transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
+  -o-transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
+  transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
+  /* ease-out */
+  -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+  -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+  -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+  transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+  /* ease-out */
+  -webkit-transition-delay: 100ms;
+  -o-transition-delay: 100ms;
+  transition-delay: 100ms;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 110%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.cart .add-to-cart .txt {
+  font-size: 12px;
+  color: #fff;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
 
 
 /* Footer */

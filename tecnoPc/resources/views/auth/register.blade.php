@@ -97,7 +97,7 @@
                 </div>
                   <div id="mensaje">
         <h3>La contraseña debe poseer los siguientes datos:</h3>
-        <p id="minus" class="invalid">Una letra <b>Mnúscula</b> </p>
+        <p id="minus" class="invalid">Una letra <b>Minúscula</b> </p>
         <p id="mayus" class="invalid">Una letra <b>Mayúscula</b> </p>
         <p id="numero" class="invalid">Un <b>Número</b></p>
         <p id="largo" class="invalid">Un mínimo de <b>8 carácteres</b></p>

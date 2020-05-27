@@ -83,19 +83,6 @@ public function editar(Request $request)
         $usuario->save();
 
         return view('/perfil', $usuario);
-  //     }
-  // // public function guardarDatos(Request $request){
-  // //   $this->validate(request(),[
-  // //
-  // //   ]);
-  // //
-  // //   $user= new User();
-  // //   $user->name= $request['name'];
-  // //   $user->surname= $request['surname'];
-  // //   $user->direccion= $request['direccion'];
-  // //   $user->password= $request['password'];
-  // //   $user->save();
-  // //
-  // //     return redirect('/perfil');
+     }
+
   }
-}

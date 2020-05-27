@@ -30,14 +30,14 @@
 
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-dark">
-            <a class="navbar-brand" href="home">TecnoPc</a>
+            <a class="navbar-brand" href="/">TecnoPc</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="navbar-collapse collapse " id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="home">Inicio<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/">Inicio<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="faq">F.A.Q</a>
@@ -46,7 +46,7 @@
                         <a class="nav-link" href="contacto">Contacto</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="home">Catálogo </a>
+                        <a class="nav-link" href="/">Catálogo </a>
                 </ul>
                   <ul class="navbar-nav ml-auto">
                       <!-- Authentication Links -->
@@ -62,7 +62,7 @@
                       @else
                           <li class="nav-item dropdown">
                               <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre style="position:relative; padding-left:50px;">
-                                <img src="/cargas/avatares/{{$usuario->avatar}}" style="width:32px; height:32px; position:absolute; top: 10px; left: 10px; border-radius:50%" alt="">
+                                <img src="/cargas/avatares/{{Auth::User()->avatar}}" style="width:32px; height:32px; position:absolute; top: 10px; left: 10px; border-radius:50%" alt="">
                                   {{ Auth::user()->name }} <span class="caret"></span>
                               </a>
 
@@ -102,10 +102,12 @@
                       @endguest
                       <li class="nav-item">
                           <div class="carrito">
+                            <a href="{{ route('producto.carrito')}}">
                               <div class="carrito_icono"><img src="img/carrito.png"></div>
                               <div class="carrito_cont_texto">
-                                  <div class="carrito_texto1"><a href="productoDetalle">VER PEDIDO</a></div>
-                                  <div class="carrito_texto2">$ 0</div>
+                                  <div class="carrito_texto1">CANT:<span class="badge">{{ Session::has('cart') ? Session:: get('cart')->totalQty : '0' }} </span></div>
+                                  <div class="carrito_texto2">TOTAL: <span class="badge">{{ Session::has('cart') ? Session:: get('cart')->totalPrice : '0' }} </span></div>
+                                  </a>
                               </div>
                           </div>
                       </li>

@@ -15,15 +15,15 @@ Contacto
         <h3 class="text-upparcase text-left">Formulario de contacto</h3>
         <div class="form-group row">
         <label for="" class="col-2 col-form-label">Nombre</label>
-        <input type="text" placeholder="Escribe tu nombre aqui" class="form-control col-10">
+        <input type="text" placeholder="Escribe tu nombre aqui" value="{{ $usuario['name'] }}" class="form-control col-10">
 </div>
         <div class="form-group row">
             <label for=""  class="col-2 col-form-label">Apellido</label>
-        <input type="text" placeholder="Escribe su Apellido aqui" class="form-control col-10">
+        <input type="text" placeholder="Escribe su Apellido aqui" value="{{ $usuario['surname'] }}" class="form-control col-10">
         </div>
         <div class="form-group row">
             <label for=""  class="col-2 col-form-label">Email</label>
-            <input type="email" placeholder="ingrese su email aqui" class="form-control col-10">
+            <input type="email" placeholder="ingrese su email aqui" value="{{ $usuario['email'] }}" class="form-control col-10">
 
         </div>
         <div class="form-group">
