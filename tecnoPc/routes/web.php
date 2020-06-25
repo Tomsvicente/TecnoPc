@@ -14,8 +14,8 @@
 //use Symfony\Component\Routing\Route;
 use Illuminate\Support\Facades\Route;
 Route::get('/', [
-  'uses' => 'productoController@getIndex',
-  'as' => 'producto.index'
+  'as' => 'producto.index',
+  'uses' => 'productoController@getIndex'
 ]);
 
 Route::get('/Agregar-Al-Carrito/{id}', [
@@ -30,7 +30,7 @@ Route::get('/reducir/{id}', [
 
 Route::get('/remover/{id}', [
     'uses' => 'productoController@getRemoverItem',
-    'as' => 'producto.reducirUno'
+    'as' => 'producto.remover'
 ]);
 
 Route::get('/carrito', [
@@ -43,9 +43,12 @@ Route::get('/contacto','contactoController@contacto');
 Route::get('/faq','faqcontroller@faq');
 Route::get('/productoDetalle','productoController@producto');
 
-Route::get('/categoria/{$id}' , 'categoriaController@listado');
+Route::get('/categoria/{id}', [
+  'uses' => 'categoriaController@filtrarCategorias',
+  'as' => 'filtrar.categoria'
+  ]);
 
-
+Route::get('/buscador');
 
 
 Route::get('/perfil','perfilController@index')->name('perfil');
@@ -68,3 +71,14 @@ Route::get('/', [
 ]);
 
 Auth::routes();
+
+Route::get('/admin', function(){
+  return 'sos admin';
+}) ->middleware(['auth', 'auth.admin']);
+
+Route::namespace('Admin')->prefix('admin')->middleware(['auth', 'auth.admin'])->name('admin.')->group(function(){
+  Route::resource('/users', 'UserController', ['except' => ['show', 'create' ,'store']]);
+  Route::get('/impersonate/user/{id}','ImpersonateController@index')->name('impersonate');
+});
+
+Route::get('/admin/impersonate/destroy', 'Admin\ImpersonateController@destroy')->name('admin.impersonate.destroy');

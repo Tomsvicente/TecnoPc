@@ -8,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
      <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="{{asset('css/estilo.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     {{-- Fuentes --}}
    <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -47,6 +48,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/">Catálogo </a>
+                        </li>
+
+
                 </ul>
                   <ul class="navbar-nav ml-auto">
                       <!-- Authentication Links -->
@@ -95,6 +99,28 @@
                                       @csrf
                                   </form>
 
+                                  @hasrole('Admin')
+                                  <a class="dropdown-item" href="{{ route('admin.users.index') }}"
+                                     onclick="event.preventDefault();
+                                                   document.getElementById('administrarUsers-form').submit();"><i><svg class="bi bi-box-arrow-left" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  </svg></i>
+                                      {{ __('Administrar') }}
+                                  </a>
+                                  <form id="administrarUsers-form" action="{{ route('admin.users.index') }}" method="get" style="display: none;">
+                                      @csrf
+                                  </form>
+                                  @endhasrole
+                                  @impersonate()
+                                  <a class="dropdown-item" href="{{ route('admin.impersonate.destroy') }}"
+                                     onclick="event.preventDefault();
+                                                   document.getElementById('AdminImpersonate-form').submit();"><i><svg class="bi bi-box-arrow-left" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  </svg></i>
+                                      {{ __('Detener Previsualizacion') }}
+                                  </a>
+                                  <form id="AdminImpersonate-form" action="{{ route('admin.impersonate.destroy') }}" method="get" style="display: none;">
+                                      @csrf
+                                  </form>
+                                  @endimpersonate
                               </div>
 
 
@@ -103,7 +129,7 @@
                       <li class="nav-item">
                           <div class="carrito">
                             <a href="{{ route('producto.carrito')}}">
-                              <div class="carrito_icono"><img src="img/carrito.png"></div>
+                              <div class="carrito_icono"><img src="{{asset("../carrito.png")}}"></div>
                               <div class="carrito_cont_texto">
                                   <div class="carrito_texto1">CANT:<span class="badge">{{ Session::has('cart') ? Session:: get('cart')->totalQty : '0' }} </span></div>
                                   <div class="carrito_texto2">TOTAL: <span class="badge">{{ Session::has('cart') ? Session:: get('cart')->totalPrice : '0' }} </span></div>
@@ -118,7 +144,7 @@
   </header>
 
         <section>
-
+          @include('parciales.alertas')
           @yield('section')
 
         </section>

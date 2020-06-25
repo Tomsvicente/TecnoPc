@@ -10,4 +10,9 @@ class Product extends Model
     protected $fillable = ['imagen','name','detail','price','brand_id','category_id'];
     protected $guarded = [];
     public $timestamp =true;
+
+    public function categoria(){
+      return $this->belongsTo('App\Category');
+    }
+
 }

@@ -20,7 +20,7 @@ Inicio
                         <li class="strong">CATEGORIAS</li>
 
                         @foreach ($categorias as $categoria)
-                          <a href="categoria">
+                          <a href="{{route('filtrar.categoria', $categoria->id)}}">
                               <li>
                                   <div class="box">
                                       <h3>{{$categoria->name_category}}</h3>
@@ -41,6 +41,7 @@ Inicio
   <div class="page__demo">
     <form class="search">
       <div class="a-field search__field">
+        <form onsubmit="return showLoad()" action="{{route('filtrar.categoria', $categoria->id)}}" method="get">
         <input type="text" id="query" class="r-text-field a-field__input search__input" placeholder="Ej: Placa de video" required>
         <button class="r-button search__button search__clear" type="reset">
           <span class="search__clear-label">Limpiar buscador</span>
@@ -67,7 +68,7 @@ Inicio
                 <div class="col-md-12">
                     <a href="productoDetalle">
                         <div class="producto_destacado">
-                            <img src="img/accesorios-pc.jpg" alt="combo" width="30%">
+                            <img src={{asset("img/accesorios-pc.jpg")}} alt="combo" width="30%">
                             <div class="cont_texto_des">
                                 <h3>PRODUCTO DESTACADO</h3>
                                 <p>COMBO GAMER TECLADO MOUSE Y AURICULARES</p>
@@ -87,7 +88,7 @@ Inicio
 
               <div class="el-wrapper">
   <div class="box-up">
-    <img class="img" src="{{$producto->imagen}}" alt="">
+    <img class="img" src="{{asset($producto->imagen)}}" alt="">
     <div class="img-info">
       <div class="info-inner">
         <span class="p-name">{{$producto->name}}</span>
@@ -111,9 +112,13 @@ Inicio
   </div>
 </div>
   @endforeach
+
+
                 </div>
             </div>
+            <div class="paginacion">
 
+            {{$productos->links()}}
         </div>
     </div>
 </div>
